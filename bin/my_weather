@@ -1,1 +1,3 @@
 #!/usr/bin/env ruby
+require_relative "../lib/weather_gem_project.rb"
+Cli.new.call
