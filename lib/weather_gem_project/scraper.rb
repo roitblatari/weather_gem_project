@@ -11,7 +11,8 @@ class Scraper
  		weather = self.get_page(input).css("div.today_nowcard-temp > span").text	
 		# binding.pry 
 		puts "*** Your Weather Is  ***"
-		puts "      "+ weather
+		puts "     "+ weather + " 
+			"
 		self # 
 	end
 
