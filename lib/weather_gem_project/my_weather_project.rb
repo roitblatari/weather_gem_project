@@ -1,6 +1,3 @@
-require 'nokogiri'
-require 'open-uri'
-require 'pry'
 
 class Weather
   # attr_accessor :weather_scraper
@@ -33,10 +30,7 @@ class Weather
       else
         puts "Please Try Again"
     end
-       
   end
- 
-
 end
 
 

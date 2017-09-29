@@ -1,6 +1,4 @@
-require 'nokogiri'
-require 'open-uri'
-require 'pry'
+
 
 class Scraper
  	def get_page(input)
@@ -11,11 +9,10 @@ class Scraper
  		weather = self.get_page(input).css("div.today_nowcard-temp > span").text	
 		# binding.pry 
 		puts "*** Your Weather Is  ***"
-		puts "     "+ weather + " 
-			"
+		puts "     "+ weather + "
+		"
 		self # 
 	end
-
 	
 	def self.wind
 		@@doc.css("div.today_nowcard-sidecar.component.panel > table > tbody > tr:nth-child(1) > td >span").text
