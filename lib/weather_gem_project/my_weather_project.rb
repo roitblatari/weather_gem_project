@@ -1,36 +1,22 @@
 
 class Weather
-  # attr_accessor :weather_scraper
-  def self.details(input)
- 
-    case input
-      when "wind"
-        
-        puts	 Scraper.wind
-        puts "*******
-        "
-      when "humidity"
-        puts Scraper.humidity
-        puts "*******
-        "
-      when "dew_point"
-        puts Scraper.dew_point
-        puts "*******
-        "
-      when "pressure"
-        puts Scraper.pressure
-        puts "*******
-        "
-      when "visibility"  
-        puts Scraper.visibility
-        puts "*******
-        "
-      when "exit"
-        return "good by"
-      else
-        puts "Please Try Again"
-    end
+  attr_accessor :wind, :humidity, :dew_point, :pressure, :visibility, :weather_scraper, :temperature
+  
+  @@current_weather = nil
+  @@all = []
+  def initialize(temp)
+    @temperature = temp
+    @@all << self
+    @@current_weather = self
   end
+ def self.all
+   @@all
+ end
+  def self.current_weather
+    @@current_weather
+  end
+
+  
 end
 
 
